@@ -13,7 +13,7 @@ then
   ./${file_name%.c}
 elif [[ $file_name == *.rs ]]
 then
-  ./${file_name%.rs}
+  cargo run
 elif [[ $file_name == *.asm ]]
 then
   ./${file_name%.asm}
@@ -26,6 +26,9 @@ then
 elif [[ $file_name == *.ts ]]
 then
   node ${file_name%.ts}.js
+elif [[ $file_name == *.hs ]]
+then
+  ./${file_name%.hs}
 else
   echo "File type not supported"
 fi
