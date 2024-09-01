@@ -7,7 +7,7 @@ echo ""
 
 if [[ $file_name == *.cpp ]]
 then
-  g++ $file_name -o ${file_name%.cpp}
+  g++ $file_name -o  ${file_name%.cpp} -std=c++23
 elif [[ $file_name == *.c ]]
 then
   include_genericLinkedList=$(grep -q '#include "genericLinkedList"' $file_name; echo $?)
